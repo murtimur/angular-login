@@ -29,10 +29,6 @@ export class LoginComponent {
     }
     const storedData = JSON.parse(localStorage.getItem('auth'));
     if (storedData.id > 0) {
-      localStorage.removeItem('faturbaslik');
-      localStorage.removeItem('cari');
-      localStorage.removeItem('personel');
-      localStorage.removeItem('kur');
       localStorage.removeItem('auth');
     }
   }
