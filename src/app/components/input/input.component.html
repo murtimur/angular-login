@@ -1,0 +1,11 @@
+<div class="form-group">
+  <label style="font-weight: bold;font-size: 20px;">{{ label }}</label>
+  <input style="font-weight: bold;" autocomplete="off"
+    [id]="id"
+    [class]="className"
+    [type]="type"
+    [ngModel]="value"
+    (ngModelChange)="onValueChange($event)"
+  />
+  <div class="invalid-feedback"><b>{{ help }}</b></div>
+</div>

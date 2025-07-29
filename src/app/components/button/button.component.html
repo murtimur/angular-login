@@ -1,0 +1,11 @@
+<div>
+  <button
+    style="height: 90px; width: 300px; font-size: 25px"
+    [type]="type"
+    [ngClass]="className"
+    (click)="onButtonClick()"
+  >
+    <div><span *ngIf="icon" [innerHTML]="icon"></span></div>
+    <b>{{ text }}</b>
+  </button>
+</div>

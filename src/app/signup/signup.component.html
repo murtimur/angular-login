@@ -1,0 +1,26 @@
+<div class="row mx-2">
+  <div class="col-sm-3">
+    <app-input
+      [(value)]="user.username"
+      [className]="
+        errors['username'] ? 'form-control is-invalid' : 'form-control'
+      "
+      [label]="'Kullanıcı Adı'"
+      [id]="'username'"
+      [help]="errors['username'] || ''"
+    ></app-input>
+    <app-input
+      [(value)]="user.password"
+      [className]="
+        errors['password'] ? 'form-control is-invalid' : 'form-control'
+      "
+      [type]="'password'"
+      [label]="'Şifre'"
+      [id]="'password'"
+      [help]="errors['password'] || ''"
+    ></app-input>
+  </div>
+  <div class="text-center mt-3">
+    <button (click)="userCreate()" class="btn btn-primary">Kaydet</button>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="card mt-5 col-10 col-sm-8 col-md-6 col-lg-6 mx-auto">
+    <form (ngSubmit)="login($event)">
+        <div class="container mt-5">
+            <app-input
+            [label]="'Kullanıcı Adı'"
+            [className]="'form-control form-control-lg'"
+            [id]="'username'"
+            [(value)]="username"></app-input>
+        </div>
+        <div class="container mt-1">
+            <app-input
+            [label]="'Şifre'"
+            [className]="'form-control form-control-lg'"
+            [(value)]="password"
+            [type]="'password'"></app-input>
+        </div>
+        <div *ngIf="errorMessage" class="mt-2 alert alert-danger alert-dismissible fade show container" role="alert">
+            <strong>{{errorMessage}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <div class="text-center mt-2">
+            <button style="font-size: 20px;" type="submit" class="btn btn-primary"><b>Giriş Yap</b></button>
+        </div>
+    </form>
+</div>
+
+<div class="text-center mt-2">
+    <button (click)="ayarPageRouter()" class="btn btn-dark"><b><i class="bi bi-gear"></i></b></button>
+</div>

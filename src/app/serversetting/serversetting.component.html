@@ -1,0 +1,12 @@
+<div class="text-center">
+    <h1><b>Server Bilgileri</b></h1>
+    <div class="mx-5">
+        <input [(ngModel)]="serverSetting" class="form-control" placeholder="Örn.: http://192.168.1.2:4200" />
+    </div>
+    <div class="d-grid gap-2 mt-2 mx-5" style="margin-left: 5px;">
+        <button (click)="ayarEkle()" class="btn btn-primary" type="button"><b>Kaydet</b></button>
+    </div>
+    <div *ngIf="serverSetting" class="d-grid gap-2 mt-2 mx-5" style="margin-left: 5px;">
+        <button (click)="ayariSil()" class="btn btn-info" type="button"><b>Ayarı Sil</b></button>
+    </div>
+</div>
